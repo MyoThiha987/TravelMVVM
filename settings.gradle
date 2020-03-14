@@ -1,0 +1,5 @@
+rootProject.name='TravelMVVM'
+include ':app'
+include ':travelmvp'
+include ':travelmvi'
+include ':travelviper'
