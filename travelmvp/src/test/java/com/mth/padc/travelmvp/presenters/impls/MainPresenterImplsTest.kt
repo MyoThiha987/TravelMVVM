@@ -41,18 +41,6 @@ class MainPresenterImplsTest {
     }
 
     @Test
-    fun onUiReady_callGetAllCountriesAndTours() {
-        val lifecycleOwner = mock(LifecycleOwner::class.java)
-        val lifecycleRegistry = LifecycleRegistry(lifecycleOwner)
-        lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_RESUME)
-        `when`(lifecycleOwner.lifecycle).thenReturn(lifecycleRegistry)
-        mPresenter.onUIReady(lifecycleOwner)
-        verify {
-            mView.showToursData(getDummyCountries().toMutableList())
-        }
-    }
-
-    @Test
     fun onTapList_callToCountryDetail(){
         val tourVo = CountryVO()
         tourVo.name ="Myanmar"
