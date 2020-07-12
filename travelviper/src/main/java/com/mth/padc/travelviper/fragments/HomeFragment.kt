@@ -41,9 +41,8 @@ class HomeFragment : Fragment(), ToursListContract.View {
         setUpNavigator()
         setUpPresenter()
         mPresenter.onUIReady()
-
         setUpCountryRecycler()
-        setPopularToursUpRecycler()
+       // setPopularToursUpRecycler()
     }
 
     private val navigator: Navigator? by lazy {
@@ -82,21 +81,21 @@ class HomeFragment : Fragment(), ToursListContract.View {
     private fun setUpCountryRecycler(){
 
          mCountryAdapter = CountryAdapter(mPresenter)
-        val layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
+        val layoutManager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false)
         rvCountry.layoutManager = layoutManager
         rvCountry.adapter = mCountryAdapter
     }
 
-    private fun setPopularToursUpRecycler(){
-        mPopularToursAdapter = PopularToursAdapter(mPresenter)
-        val layoutManager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false)
-        rvPopularTour.layoutManager = layoutManager
-        rvPopularTour.adapter = mPopularToursAdapter
-    }
+//    private fun setPopularToursUpRecycler(){
+//        mPopularToursAdapter = PopularToursAdapter(mPresenter)
+//        val layoutManager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false)
+//        rvPopularTour.layoutManager = layoutManager
+//        rvPopularTour.adapter = mPopularToursAdapter
+//    }
 
     override fun showTourList(toursLists: List<CountryVO>) {
-        mCountryAdapter.setData(toursLists.subList(0,4).toMutableList())
-        mPopularToursAdapter.setData(toursLists.subList(5,9).toMutableList())
+        mCountryAdapter.setData(toursLists.toMutableList())
+       //mPopularToursAdapter.setData(toursLists.subList(5,9).toMutableList())
     }
 
     override fun showErrorMessage(message: String) {

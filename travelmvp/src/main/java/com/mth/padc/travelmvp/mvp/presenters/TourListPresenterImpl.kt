@@ -2,7 +2,7 @@ package com.mth.padc.travelmvp.mvp.presenters
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
-import com.mth.padc.travelmvp.ToursModelImpl
+import com.mth.padc.travelmvp.models.ToursModelImpl
 import com.mth.padc.travelmvp.mvp.views.TourListsView
 
 class TourListPresenterImpl : TourListPresenter,AbstractBasePresenter<TourListsView>(){
@@ -17,7 +17,7 @@ class TourListPresenterImpl : TourListPresenter,AbstractBasePresenter<TourListsV
         mView?.navigateToNewsDetails(name)
     }
 
-    private fun requestAllNews(lifecyclcleowner: LifecycleOwner){
+    private fun requestAllNews(lifecyclcleowner : LifecycleOwner){
         mToursModel.getDataFromDb{
 
         }.observe(lifecyclcleowner, Observer {

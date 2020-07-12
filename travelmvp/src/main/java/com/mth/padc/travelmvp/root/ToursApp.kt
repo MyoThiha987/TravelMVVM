@@ -1,15 +1,16 @@
-package com.mth.padc.travelmvp
+package com.mth.padc.travelmvp.root
 
 import android.app.Application
-import android.content.Context
 import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
+import com.mth.padc.travelmvp.workers.GetTourWorker
+import com.mth.padc.travelmvp.models.ToursModelImpl
 
 class ToursApp : Application(){
 
     override fun onCreate() {
         super.onCreate()
-        ToursModelImpl.initDataBase(applicationContext)
+        ToursModelImpl.init(applicationContext)
         getToursDataOneTime()
     }
 

@@ -1,8 +1,10 @@
-package com.mth.padc.travelmvp
+package com.mth.padc.travelmvp.models
 
 import android.annotation.SuppressLint
 import android.util.Log
 import androidx.lifecycle.LiveData
+import com.mth.padc.travelmvp.CountriesAndCountryVO
+import com.mth.padc.travelmvp.CountryVO
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.BiFunction

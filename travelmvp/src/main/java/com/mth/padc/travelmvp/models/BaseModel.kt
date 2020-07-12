@@ -1,6 +1,9 @@
-package com.mth.padc.travelmvp
+package com.mth.padc.travelmvp.models
 
 import android.content.Context
+import com.mth.padc.travelmvp.AppDatabase
+import com.mth.padc.travelmvp.network.ToursApi
+import com.mth.padc.travelmvp.utility.BASE_URL
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -27,6 +30,10 @@ abstract class BaseModel {
             .build()
 
         mToursApi = retrofit.create(ToursApi::class.java)
+    }
+
+    fun init(context: Context){
+        initDataBase(context)
     }
 
     fun initDataBase(context: Context){

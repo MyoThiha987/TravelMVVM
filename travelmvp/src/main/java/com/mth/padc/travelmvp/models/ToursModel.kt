@@ -1,6 +1,8 @@
-package com.mth.padc.travelmvp
+package com.mth.padc.travelmvp.models
 
 import androidx.lifecycle.LiveData
+import com.mth.padc.travelmvp.CountriesAndCountryVO
+import com.mth.padc.travelmvp.CountryVO
 import io.reactivex.Observable
 
 interface ToursModel  {

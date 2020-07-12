@@ -20,6 +20,4 @@ data class CountryVO (
     var scoresandreviews : List<ScoresAndReviewsVO> = listOf(),
     @SerializedName("photos")
     var photos : List<String> = listOf()
-){
-
-}
+)

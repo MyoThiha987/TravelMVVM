@@ -1,4 +1,4 @@
-package com.mth.padc.travelmvp
+package com.mth.padc.travelmvp.fragments
 
 
 import android.os.Bundle
@@ -6,15 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.lifecycle.get
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.snackbar.Snackbar
+import com.mth.padc.travelmvp.*
 import com.mth.padc.travelmvp.mvp.presenters.TourListPresenter
 import com.mth.padc.travelmvp.mvp.presenters.TourListPresenterImpl
 import com.mth.padc.travelmvp.mvp.views.TourListsView
-import com.mth.padc.travelmvp.utility.snack
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
@@ -40,7 +37,7 @@ class HomeFragment : Fragment(), TourListsView {
         setUpPresenter()
         mPresenter.onUIReady(this)
         setUpCountryRecycler()
-        setPopularToursUpRecycler()
+        //setPopularToursUpRecycler()
         //setUpDataObserver(view)
     }
 
@@ -51,7 +48,7 @@ class HomeFragment : Fragment(), TourListsView {
 
     override fun showToursData(list: MutableList<CountryVO>) {
         mCountryAdapter.setData(list.subList(0,4).toMutableList())
-        mPopularToursAdapter.setData(list.subList(5,9).toMutableList())
+        //mPopularToursAdapter.setData(list.subList(5,9).toMutableList())
     }
 
     override fun navigateToNewsDetails(name: String) {

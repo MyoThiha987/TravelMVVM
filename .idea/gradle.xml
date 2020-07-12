@@ -11,6 +11,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/travelmvc" />
             <option value="$PROJECT_DIR$/travelmvi" />
             <option value="$PROJECT_DIR$/travelmvp" />
             <option value="$PROJECT_DIR$/travelviper" />

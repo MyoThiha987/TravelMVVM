@@ -1,25 +1,22 @@
-package com.mth.padc.travelmvp
+package com.mth.padc.travelmvp.fragments
 
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.list.rados.fast_list.bind
+import com.mth.padc.travelmvp.CountryVO
+import com.mth.padc.travelmvp.R
 import com.mth.padc.travelmvp.mvp.presenters.TourDetailPresenterImpl
 import com.mth.padc.travelmvp.mvp.views.TourDetailView
 import kotlinx.android.synthetic.main.fragment_favourit.view.*
-import kotlinx.android.synthetic.main.list_item_tours_photos.*
 import kotlinx.android.synthetic.main.list_item_tours_photos.view.*
 
-import java.util.stream.Collectors.toList
 
 /**
  * A simple [Fragment] subclass.

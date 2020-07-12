@@ -18,6 +18,9 @@ interface CountryDao {
     @Query("delete from country")
     fun deleteAllData()
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun saveData(data : CountryVO)
+
 
 
 
